@@ -1,0 +1,142 @@
+@import "../utilities/mixins";
+
+$title-color: $text-strong !default;
+$title-family: false !default;
+$title-size: $size-3 !default;
+$title-weight: $weight-semibold !default;
+$title-line-height: 1.125 !default;
+$title-strong-color: inherit !default;
+$title-strong-weight: inherit !default;
+$title-sub-size: 0.75em !default;
+$title-sup-size: 0.75em !default;
+
+$subtitle-color: $text !default;
+$subtitle-family: false !default;
+$subtitle-size: $size-5 !default;
+$subtitle-weight: $weight-normal !default;
+$subtitle-line-height: 1.25 !default;
+$subtitle-strong-color: $text-strong !default;
+$subtitle-strong-weight: $weight-semibold !default;
+$subtitle-negative-margin: -1.25rem !default;
+
+.title,
+.subtitle {
+  @extend %block;
+
+  word-break: break-word;
+
+  em,
+  span {
+    font-weight: inherit;
+  }
+
+  sub {
+    font-size: $title-sub-size;
+  }
+
+  sup {
+    font-size: $title-sup-size;
+  }
+
+  .tag {
+    vertical-align: middle;
+  }
+}
+
+.title {
+  color: $title-color;
+
+  @if $title-family {
+    font-family: $title-family;
+  }
+
+  font-size: $title-size;
+  font-weight: $title-weight;
+  line-height: $title-line-height;
+
+  &.pageTitle {
+    color: $primary;
+    letter-spacing: 2.5px;
+    // text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    font-size: $size-1;
+    font-weight: 600;
+    margin-bottom: 0;
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  strong {
+    color: $title-strong-color;
+    font-weight: $title-strong-weight;
+  }
+
+  &:not(.is-spaced) + .subtitle {
+    margin-top: $subtitle-negative-margin;
+  }
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+}
+
+// Break up big headings
+.dora,
+.staff-publications,
+.staff-presentations,
+.world-resources,
+.international-faimer-institute,
+.research-migration, .research-programs {
+  .pageTitle {
+    @media screen and (max-width: 711px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 475px) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.subtitle {
+  color: $subtitle-color;
+
+  &.homeSubtitle {
+    color: $white;
+    font-size: 1rem;
+  }
+
+  @if $subtitle-family {
+    font-family: $subtitle-family;
+  }
+
+  font-size: $subtitle-size;
+  font-weight: $subtitle-weight;
+  line-height: $subtitle-line-height;
+
+  strong {
+    color: $subtitle-strong-color;
+    font-weight: $subtitle-strong-weight;
+  }
+
+  &:not(.is-spaced) + .title {
+    margin-top: $subtitle-negative-margin;
+  }
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+}

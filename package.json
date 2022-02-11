@@ -1,0 +1,14 @@
+{
+  "name": "ecfmg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/bulma.scss:./css/style.min.css --style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@creativebulma/bulma-collapsible": "^1.0.4"
+  }
+}

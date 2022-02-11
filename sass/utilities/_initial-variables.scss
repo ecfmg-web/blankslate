@@ -1,0 +1,92 @@
+// Colors
+
+$black: hsl(0, 0%, 4%) !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+
+$jet: #333333 !default;
+$dark-liver: #534d56 !default;
+$taupe-gray: #88818b !default;
+$lavender-gray: #d5d0da !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+$grey-lightest: hsl(0, 0%, 93%) !default;
+$linen: #f8efe3 !default;
+$linen-dark: #bfb3a4 !default;
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$orange: #ed693a !default;
+$orange-hover: #dc6034 !default;
+$orange-active: #ca582f !default;
+$sunglow: #ffcc33 !default;
+$green-pigment: #10a64a !default;
+$purple-navy: #3f4373 !default;
+$purple-navy-hover: #5f65a7 !default;
+$purple-navy-active: #20223a !default;
+$cyan: hsl(207, 61%, 53%) !default;
+$middle-blue: #61c8d7 !default;
+$middle-blue-hover: #afe3eb !default;
+$middle-blue-active: #288c9c !default;
+$dropdown-highlight: #e2d5e8 !default;
+$purple: hsl(271, 100%, 71%) !default;
+$pictorial-carmine: #cc1f36 !default;
+
+// Typography
+
+$family-sans-serif: "Libre Franklin", sans-serif !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+// Spacing
+
+$block-spacing: 1.5rem !default;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+//$fullhd: 1344px + 2 * $gap !default;
+$fullhd: 1152px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+
+// Miscellaneous
+
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radius-rounded: 50% !default;
+$speed: 86ms !default;
+
+// Flags
+
+$variable-columns: true !default;
+$rtl: false !default;

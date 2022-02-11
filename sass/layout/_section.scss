@@ -1,0 +1,156 @@
+@import "../utilities/mixins";
+
+$section-padding: 3rem 1.5rem !default;
+$section-padding-desktop: 3rem 3rem !default;
+$section-padding-medium: 9rem 4.5rem !default;
+$section-padding-large: 18rem 6rem !default;
+
+.section {
+  padding: $section-padding;
+
+  &.is-landing {
+    a i {
+      transition: all 0.2s ease-out;
+    }
+    a:hover i {
+      transform: translateX(6px);
+      &.fa-arrow-up {
+        transform: translateY(-3px);
+      }
+      &.fa-external-link-alt {
+        transform: translate(6px, -6px);
+      }
+    }
+  }
+
+  &.logoChildren {
+    background-color: $linen;
+    border-bottom: 8px solid $orange;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &.logoMarkBackground {
+    background-image: url(/intealth/images/intealth-logomark.png);
+    background-repeat: no-repeat;
+  }
+
+  &.logoSection {
+    padding: 1rem;
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+      .column.is-one-third {
+        width: 100%;
+      }
+      .columns:not(.is-desktop) {
+        display: block;
+      }
+    }
+    .column.is-one-fifth {
+      width: 17%;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+  &.homeBanner {
+    .column.is-three-fifths {
+      width: auto;
+    }
+    .columns {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .buttons {
+      margin-top: 1rem;
+    }
+    padding: 1rem 3rem;
+    border-bottom: 8px solid $middle-blue;
+    position: relative;
+    background-image: url("/images/home-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: $orange;
+      width: 100%;
+      bottom: -11px;
+      height: 4px;
+      left: 0;
+    }
+  }
+
+  &.topSection {
+    position: relative;
+    padding: 1rem 3rem;
+    background-color: $primary;
+  }
+
+  &.headingTop {
+    background-image: url("/images/background-heading.jpg");
+    background-repeat: repeat;
+    border-bottom: 4px solid $orange;
+    padding: 1rem 3rem;
+  }
+
+  &.donateSection {
+    padding: 1rem 3rem;
+
+    &.commentSection {
+      padding: 0rem 3rem;
+    }
+  }
+
+  &.highlights {
+    text-align: center;
+
+    .column {
+      border-radius: 20px;
+      background-color: $orange;
+      margin-right: 1rem;
+      padding: 1.5rem;
+      color: $white;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  &.footerSection {
+    background-color: $dark-liver;
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+
+  // Responsiveness
+  @include desktop {
+    padding: $section-padding-desktop;
+
+    // Sizes
+    &.is-medium {
+      padding: $section-padding-medium;
+    }
+
+    &.is-large {
+      padding: $section-padding-large;
+    }
+  }
+}

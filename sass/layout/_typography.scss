@@ -1,0 +1,38 @@
+@import "../utilities/mixins";
+@import "../utilities/initial-variables";
+
+.centeredText {
+  text-align: center;
+}
+
+.bigCopy {
+  font-size: 2rem;
+}
+
+.videoText {
+  color: $white;
+}
+
+.purpleText {
+  color: $primary;
+}
+
+.allCaps {
+  text-transform: uppercase;
+}
+
+i.fa.fa-5x {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: #3f4373;
+}
+
+a.no-text-decoration,
+div.no-text-decoration a {
+  text-decoration: none;
+}
+
+.helpBox ul {
+  list-style-type: none;
+}
