@@ -1,6 +1,10 @@
-<?php get_header(); ?>
-<main id="content" role="main">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php
+$title="ECFMG News | ";
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-header.php";
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
+<section class="section has-background-secondary">
+<?php
+ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="header">
 <h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
@@ -13,5 +17,9 @@
 </article>
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
-</main>
-<?php get_footer(); ?>
+</div><!-- content-->
+</div><!-- column -->
+</div><!-- columns -->
+</section>
+<?php
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-footer.php";

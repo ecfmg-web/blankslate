@@ -12,10 +12,10 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
-//add_action( 'after_setup_theme', 'blankslate_setup' );
+add_action( 'after_setup_theme', 'blankslate_setup' );
 function blankslate_setup() {
     //load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
-    //add_theme_support( 'title-tag' );
+    add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     //add_theme_support( 'responsive-embeds' );
     //add_theme_support( 'automatic-feed-links' );
@@ -26,7 +26,7 @@ function blankslate_setup() {
     //register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' ) ) );
 }
 
-//add_filter( 'the_title', 'blankslate_title' );
+add_filter( 'the_title', 'blankslate_title' );
 function blankslate_title( $title ) {
     if ( $title == '' ) {
         return '...';
