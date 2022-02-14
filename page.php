@@ -1,9 +1,7 @@
 <?php
 $title="ECFMG News | ";
 include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-header.php";
-include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
-<section class="section has-background-secondary">
-<?php
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php";
  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="header">
