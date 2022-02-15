@@ -1,8 +1,15 @@
-<section>
-<?php get_search_form(); ?>
-</section>
-<section>
+<div class="content sidebar">
+    <ul>
 <?php
+if ( is_active_sidebar( 'primary-widget-area' ) ) :
+dynamic_sidebar( 'primary-widget-area' );
+endif; ?>
+</ul>
+</div>
+
+<?php
+
+/*
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
     while ( $query->have_posts() ) {
@@ -12,17 +19,7 @@ if ( $query->have_posts() ) {
     wp_reset_postdata();
 } else {
     // none were found
-} ?>
-</section>
-<section>
-<?php wp_get_archives(); ?>
-</section>
+}
+*/
 
-<div class="content">
-    <ul class="menu-list">
-<?php// if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
-
-<?php// dynamic_sidebar( 'primary-widget-area' ); ?>
-<?php// endif; ?>
-    </ul>
-</div><!-- content -->
+?>
