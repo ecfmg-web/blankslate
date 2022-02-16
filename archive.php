@@ -1,12 +1,35 @@
-<?php get_header(); ?>
-<main id="content" role="main">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php the_archive_title(); ?></h1>
-<div class="archive-meta" itemprop="description"><?php if ( '' != get_the_archive_description() ) { echo esc_html( get_the_archive_description() ); } ?></div>
-</header>
+<?php
+// echo $_SERVER['REQUEST_URI'];
+$title="ECFMG News | ";
+$pageHeading2 = "News";
+$sidebar = "sidebar";
+$description = "";
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-header.php";
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-four-fifths">
+        <div class="content is-medium">
+<h1><?php the_archive_title(); ?></h1>
+<div><?php
+/* if the category has a description, it will print here */
+if ( '' != get_the_archive_description() ) { echo esc_html( get_the_archive_description() ); } ?></div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
 <?php endwhile; endif; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
-</main>
-<?php get_footer(); ?>
+</div><!-- content-->
+</div><!-- column is-four-fifths -->
+<div class="column is-one-fifth">
+<?php get_sidebar(); ?>
+</div><!-- column is-one-fifth -->
+</div><!-- columns -->
+</section>
+<?php
+include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-footer.php";

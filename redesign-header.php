@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <?php
-    if (strpos($_SERVER['REQUEST_URI'],'maintenance/')) { ?>
-        <title><?php echo $title; the_title(); ?></title>
+    if ($_SERVER['REQUEST_URI']==='/maintenance/') { ?>
+        <title>ECFMG News</title>
+        <?php
+    } elseif (strpos($_SERVER['REQUEST_URI'],'maintenance/')) { ?>
+        <title>ECFMG News | <?php the_title(); ?></title>
     <?php } else { ?>
         <title><?php echo $title; ?></title>
     <?php } ?>
