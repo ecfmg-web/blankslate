@@ -1,17 +1,12 @@
 <?php if ( is_active_sidebar( 'primary-widget-area' )  ) : ?>
-	<aside id="secondary" class="sidebar widget-area" role="complementary">
-		<div class="rightmenu news">
+	<div class="content sidebar">
+		<ul>
 			<?php dynamic_sidebar( 'primary-widget-area' ); ?>
-		</div>
-	</aside><!-- .sidebar .widget-area -->
+        </ul>
+    </div><!-- .sidebar  -->
 <?php endif;
 
 /*
-
-if ( is_active_sidebar( 'primary-widget-area' ) ) :
-dynamic_sidebar( 'primary-widget-area' );
-endif; ?>
-
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
     while ( $query->have_posts() ) {

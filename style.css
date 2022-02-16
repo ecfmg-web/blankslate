@@ -17,14 +17,22 @@ BlankSlate WordPress Theme © 2011-2022 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
 */
 .content.sidebar ul {
-    margin-left: 0;
+    margin-left: 1em;
     list-style: none;
 }
-form .search-submit {
+.content.sidebar ul li:nth-child(2) ul li {
+    margin-bottom: 1em;
+}
+.sidebar .search-form .search-submit {
     background-color: #3f4373;
     border-color: transparent;
     color: #fff;
 	font-size: .75rem;
     border-radius: 4px;
     padding: .5em 1em;
+    margin: 5px 30%;
+}
+.sidebar .search-form .search-field {
+    border-radius: 4px;
+    padding: 5px;
 }
