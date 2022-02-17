@@ -16,11 +16,25 @@ Text Domain: blankslate
 BlankSlate WordPress Theme © 2011-2022 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
 */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+h2.entry-title {
+    margin-top: .75em;
+}
+
+h3.widget-title {
+    margin-top: .75em;
+    margin-bottom: .25em;
+}
+
 .content.sidebar ul {
     margin-left: 1em;
     list-style: none;
 }
-.content.sidebar ul li:nth-child(2) ul li {
+.content.sidebar ul li:nth-child(4) ul li {
     margin-bottom: 1em;
 }
 .sidebar .search-form .search-submit {
@@ -35,4 +49,34 @@ BlankSlate is distributed under the terms of the GNU GPL
 .sidebar .search-form .search-field {
     border-radius: 4px;
     padding: 5px;
+}
+/* post styles */
+.alignright {
+    float: right;
+    margin: 0.375em 0 1.75em 1.75em;
+}
+
+.alignleft {
+    float: left;
+    margin: 0.375em 1.75em 1.75em 0;
+}
+
+.storyTellerWrap {
+    display: inline-block;
+    width: 100%;
+}
+.storyTellerFloat {
+    float: left;
+    margin-right: 20px;
+    width: 55%;
+}
+.storyTellerShadow {
+    -webkit-box-shadow: 3px 5px 8px -3px rgb(0 0 0 / 77%);
+    box-shadow: 3px 5px 8px -3px rgb(0 0 0 / 77%);
+}
+.storyTellerVideo {
+    float: right;
+}
+.storyTellerWrapPadding {
+    padding-top: 20px;
 }
