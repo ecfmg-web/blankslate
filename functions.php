@@ -40,17 +40,19 @@ function blankslate_schema_url( $atts ) {
     return $atts;
 }
 
+// controls the read more text
 add_filter( 'the_content_more_link', 'blankslate_read_more_link' );
 function blankslate_read_more_link() {
     if ( !is_admin() ) {
-        return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf( __( '...%s', 'blankslate' ), '<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>' ) . '</a>';
+        return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf( __( '...%s', 'blankslate' ), '<span class="screen-reader-text">  Read More' . /* esc_html( get_the_title() ) . */ '</span>' ) . '</a>';
     }
 }
+//controls the read more text
 add_filter( 'excerpt_more', 'blankslate_excerpt_read_more_link' );
 function blankslate_excerpt_read_more_link( $more ) {
     if ( !is_admin() ) {
         global $post;
-        return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf( __( '...%s', 'blankslate' ), '<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>' ) . '</a>';
+        return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf( __( '...%s', 'blankslate' ), '<span class="screen-reader-text">  Read More' . /* esc_html( get_the_title() ) .*/ '</span>' ) . '</a>';
     }
 }
 add_filter( 'big_image_size_threshold', '__return_false' );
