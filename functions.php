@@ -63,6 +63,7 @@ function blankslate_image_insert_override( $sizes ) {
     unset( $sizes['2048x2048'] );
     return $sizes;
 }
+
 add_action( 'widgets_init', 'blankslate_widgets_init' );
 function blankslate_widgets_init() {
     register_sidebar( array(
