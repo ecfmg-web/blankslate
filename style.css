@@ -31,13 +31,6 @@ BlankSlate is distributed under the terms of the GNU GPL
 }
 
 /* sidebar styles */
-.sidebar ul {
-    margin-left: 1em;
-    list-style: none;
-}
-.sidebar ul li:nth-child(4) ul li {
-    margin-bottom: 1em;
-}
 
 .sidebar .search-form .search-submit {
     background-color: #3f4373;
@@ -49,9 +42,29 @@ BlankSlate is distributed under the terms of the GNU GPL
     margin: 5px 30%;
 }
 .sidebar .search-form .search-field {
+    width: 100%;
     border-radius: 4px;
     padding: 5px;
 }
+
+.sidebar .search-form .search-field,
+.sidebar select {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #3f4373;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar select option {
+    margin: 5px 0;
+    padding: 2px 0;
+}
+
+
 /* post styles */
 .alignright {
     float: right;

@@ -75,3 +75,23 @@ function blankslate_widgets_init() {
     'after_title' => '</h3>',
     ) );
 }
+
+function wpb_recentposts_dropdown() {
+    $string .= '<select id="rpdropdown">
+                <option  value="" selected>Recent Posts</option>';
+
+    $args = array( 'numberposts' => '3', 'post_status' => 'publish' );
+
+    $recent_posts = wp_get_recent_posts($args);
+        foreach( $recent_posts as $recent ){
+            $string .= '<option value="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</option> ';
+        }
+
+    $string .= '</select>
+                <script type="text/javascript"> var urlmenu = document.getElementById( "rpdropdown" ); urlmenu.onchange = function() {
+                window.open( this.options[ this.selectedIndex ].value, "_self" );
+                };
+                </script>';
+
+    echo $string;
+    }
