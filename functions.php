@@ -75,3 +75,6 @@ function blankslate_widgets_init() {
     'after_title' => '</h3>',
     ) );
 }
+<script>
+    document.querySelector("#archives-2>ul").outerHTML = "<select id='archives-2'>";
+</script>
