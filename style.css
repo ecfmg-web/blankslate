@@ -82,6 +82,10 @@ BlankSlate is distributed under the terms of the GNU GPL
     display: inline-block;
     width: 100%;
 }
+
+.storyTellerWrap:nth-of-type(1) {
+    margin-bottom: 50px;
+}
 .storyTellerFloat {
     float: left;
     margin-right: 20px;
