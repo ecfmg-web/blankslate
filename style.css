@@ -23,7 +23,8 @@ BlankSlate is distributed under the terms of the GNU GPL
     max-width: 100%;
     vertical-align: middle;
 }
-.content .entry-title {
+.content .entry-title,
+.content .entry-footer {
     margin-top: .75em;
 }
 
@@ -95,4 +96,10 @@ BlankSlate is distributed under the terms of the GNU GPL
 }
 .storyTellerWrapPadding {
     padding-top: 20px;
+}
+
+.wp-caption-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: #686868;
 }
