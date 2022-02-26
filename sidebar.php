@@ -19,14 +19,11 @@
             ?>
         </select>
 
-        <h2>Archives</h2>
+        <h2>Date</h2>
         <select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
-        <option value=""><?php echo attribute_escape(__('Select Month')); ?></option>
+        <option value=""><?php echo attribute_escape(__('Select Month Year')); ?></option>
         <?php wp_get_archives('type=monthly&format=option&show_post_count=1'); ?> </select>
 
-        <h2>Recent Posts</h2>
-        <?php
-        //Recent posts - function in functions.php
-        wpb_recentposts_dropdown(); ?>
+        <!--<h2>Recent Posts</h2>-->
 
     </div><!-- .sidebar  -->
