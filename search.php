@@ -24,6 +24,7 @@ if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
 <?php endwhile; ?>
+<?php include ($_SERVER['DOCUMENT_ROOT']) . "/elements/page_top.php"; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">

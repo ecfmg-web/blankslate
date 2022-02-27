@@ -25,6 +25,7 @@ include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
 <?php endwhile; endif; ?>
+<?php include ($_SERVER['DOCUMENT_ROOT']) . "/elements/page_top.php"; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 </div><!-- content-->
 </div><!-- column is-four-fifths -->

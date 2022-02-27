@@ -22,14 +22,15 @@ get_template_part( 'entry' );
 if ( comments_open() && !post_password_required() ) { comments_template( '', true ); }
 endwhile; endif;
 ?>
-<footer class="footer">
+<?php include ($_SERVER['DOCUMENT_ROOT']) . "/elements/page_top.php"; ?>
 <?php get_template_part( 'nav', 'below-single' ); ?>
-</div><!-- content-->
-</div><!-- column is-four-fifths -->
-<div class="column is-one-fifth">
-<?php get_sidebar(); ?>
-</div><!-- column is-one-fifth -->
-</div><!-- columns -->
+        </div><!-- content-->
+      </div><!-- column is-four-fifths -->
+      <div class="column is-one-fifth">
+      <?php get_sidebar(); ?>
+      </div><!-- column is-one-fifth -->
+    </div><!-- columns -->
+  </div><!-- container -->
 </section>
 <?php
 include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-footer.php";
