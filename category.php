@@ -16,7 +16,7 @@ include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
     <div class="columns">
       <div class="column is-four-fifths">
         <div class="content is-medium">
-<h1><?php single_term_title(); ?></h1>
+<h2><?php single_term_title(); ?></h2>
 <div>
     <?php /* if category has a description, it will display in the div below */
     if ( '' != get_the_archive_description() ) { echo esc_html( get_the_archive_description() ); } ?>
