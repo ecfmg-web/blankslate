@@ -97,11 +97,11 @@ function wpb_recentposts_dropdown() {
     }
 
     function html5_search_form( $form ) {
-        $form = '<section class="search"><form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >
+        $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >
        <label class="screen-reader-text" for="s">' . __('',  'domain') . '</label>
         <input type="search" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search News" />
         <input type="submit" id="searchsubmit" class="search-submit" value="'. esc_attr__('Search News', 'domain') .'" />
-        </form></section>';
+        </form>';
         return $form;
    }
 
