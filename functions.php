@@ -103,6 +103,6 @@ function wpb_recentposts_dropdown() {
         <input type="submit" id="searchsubmit" class="search-submit" value="'. esc_attr__('Search News', 'domain') .'" />
         </form>';
         return $form;
-   }
+    }
 
     add_filter( 'get_search_form', 'html5_search_form' );

@@ -16,7 +16,8 @@ include ($_SERVER['DOCUMENT_ROOT']) . "/redesign-menu.php"; ?>
     <div class="columns">
       <div class="column is-four-fifths">
         <div class="content is-medium">
-<h2><?php the_archive_title(); ?></h2>
+<h2><?php echo str_replace('Month: ','Date: ',get_the_archive_title());
+//the_archive_title(); ?></h2>
 <div><?php
 /* if the category has a description, it will print here */
 if ( '' != get_the_archive_description() ) { echo esc_html( get_the_archive_description() ); } ?></div>
